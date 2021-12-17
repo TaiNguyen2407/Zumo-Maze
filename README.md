@@ -11,4 +11,4 @@ Tasks include:
 * Robot will avoid obstacle and run until it finds its way outside of the maze
 
 Example of products
-[Zumo Wrestling](https://www.youtube.com/watch?v=GV9WpuOOON8&ab_channel=ErichStyger)
+[Zumo Maze](https://www.youtube.com/watch?v=UWkvAnueUYM&ab_channel=stefanb.)
