@@ -25,20 +25,6 @@
 #define south 3
 
 #if 1
-            /*if ((robot_coordinate.y == 11) && (robot_coordinate.x == 0)){
-            motor_forward(70,0);
-        }*/
-        /*if ((robot_coordinate.y == 13) && (robot_coordinate.x <0)){
-            right_then_left();
-            increment_x();
-        }
-        if ((robot_coordinate.y == 13) && (robot_coordinate.x >0)){
-            right_then_left();
-            decrease_x();
-        }*/
-        /*if ((robot_coordinate.y == 13) && (robot_coordinate.x == 0)){
-            motor_forward(70,0);
-        }*/
 void init_sensors(void){
     reflectance_start();
     Ultra_Start();  
