@@ -187,7 +187,7 @@ void zmain(){
         reflectance_digital(&dig);
         int d = Ultra_GetDistance();
         motor_forward(70,0);
-        if ((dig.L3 == 1) && (dig.R3 == 1)){
+        if ((dig.L3 == 1) && (dig.R3 == 1)){ //when 6 sensors see black, robot counts 1 intersection passed
             count++;
             if ((dig.R3 == 1 && dig.L3 == 1) && (robot_coordinate.direction == north)){
                 increment_y();
@@ -202,9 +202,9 @@ void zmain(){
         if(d<7){
             maze();
         }
-        adjust_coordinate_when_at_rear();
-        adjust_coordinate_to_x0();
-        if (dig.L3 == 0 && dig.R3 == 0 && dig.L1 == 0 && dig.R1 ==0 && robot_coordinate.y == 13){
+        adjust_coordinate_when_at_rear();   //controll robot when x at -3 or 3
+        adjust_coordinate_to_x0();  //guide robot back to x at 0 when near the end of the map
+        if (dig.L3 == 0 && dig.R3 == 0 && dig.L1 == 0 && dig.R1 ==0 && robot_coordinate.y == 13){   //When all 6 sensors see white, stop robot
             get_end_time(); 
             end = xTaskGetTickCount();
             TickType_t time = end - start;
